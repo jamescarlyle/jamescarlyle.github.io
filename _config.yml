@@ -1,2 +1,41 @@
+# Title of your blog; shows in the header
+name: "James Carlyle"
+
+# Description of your content (will only be used on Google Search)
+description: "My space on the web"
+
+# Your name. Will show in your footer + sidebar 
+author: "James Carlyle"
+
+url: "http://james.carlyle.space"
+baseurl: ""
+
+# A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words. 
+author-bio: "I'm an enterprise architect of large-scale cash management and payment systems for Barclays Bank. I'm currently exploring linked data, the internet of things, smart contracts and Bitcoin"
+
+# Social Accounts (mine, as placeholders)
+
+twitter: jwgcarlyle
+github: jamescarlyle
+linkedin: jamescarlyle
+facebook: jwgcarlyle
+
+# Google Analytics (you may want to changes these with yours or even delete :)
+
+ga_domain: james.carlyle.space
+ga_tracking_id: UA-62919534-1
+
+# Other (refer to http://jekyllrb.com/docs/home/ for further details on the below)
+
+markdown: kramdown
+permalink: pretty
 highlighter: pygments
-github: [Repository metadata]
+
+paginate: 10
+paginate_path: "/page/:num"
+
+# SCSS
+
+sass:
+  sass_dir: _scss
+  style: :compressed

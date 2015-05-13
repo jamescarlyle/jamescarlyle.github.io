@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>James Carlyle - My space on the web</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="My space on the web">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="off-canvas">
+      <figure class="avatar">
+        <img src="/assets/img/avatar.jpg" alt="Picture" title="That's me, James Carlyle.">
+      </figure>
+      <div class="bio">
+          <h1>Hi, I'm James Carlyle.</h1>
+          <p>I'm an enterprise architect of large-scale cash management and payment systems for Barclays Bank. I'm currently exploring linked data, the internet of things, smart contracts and Bitcoin</p>
+      </div>
+      <nav>
+        <h6>Follow me on</h6>
+        <ul>
+          
+          <li><a target="_blank" href="https://twitter.com/jwgcarlyle">Twitter</a></li>
+          
+          
+          <li><a target="_blank" href="https://github.com/jamescarlyle">Github</a></li>
+          
+          
+          <li><a target="_blank" href="https://www.linkedin.com/in/jamescarlyle">LinkedIn</a></li>
+          
+          
+          <li><a target="_blank" href="https://www.facebook.com/jwgcarlyle">Facebook</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="site-wrapper">
+
+      <header>
+        <div class="h-wrap">
+          <h1 class="title"><a href="/" title="Back to Homepage">James Carlyle</a></h1>
+          <a class="menu-icon" title="Open Bio"><span class="lines"></span></a>
+        </div>
+      </header>
+
+      <main>
+        <section class="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2015-03-15T00:00:00+00:00" itemprop="datePublished">
+          15 March 2015
+        </time>
+      </h5>
+    </div>
+    <h1 class="page-title" itemprop="name headline">What makes an API</h1>
+    <div itemprop="articleBody">
+      <p>Welcome to my first post!</p>
+
+<p>I’m trying to promote the use of APIs to clearly separate and decouple functionality in end-to-end banking platorms.</p>
+
+<p>Rather than enforce a particular integration pattern or technology (always difficult in a diverse and large corporation), I’m trying to focus on the desirable traits of an API that a service provider should offer. My strawman list follows; I’m planning to update this following feedback.</p>
+
+<h2 id="clarity-of-responsibility">Clarity of responsibility</h2>
+<p>an API normally has a Provider that provides and maintains the service, and a Consumer that uses it, and these roles are well defined and do not change in regard to the service.</p>
+
+<h2 id="direction-of-dependency">Direction of dependency</h2>
+<p>it is normal for the Consumer to depend on the Provider (for as long as the Consumer needs the service), but the Provider should not be aware of individual Consumers, although it does need to be aware of them at an aggregated level for performance and capacity planning purposes.</p>
+
+<h2 id="documentation">Documentation</h2>
+<p>An API should be well documented - this is a pre-requisite for Self-Service (see below). The documentation should include usage examples, a formal API specification with inputs and outputs, documentation of allowable values, documentation of the data model and data relationships, usage notes etc. The acid test is whether it is possible for a Consumer that is skilled in the art to pick up the Provider’s API and begin to use it without problems or questions.</p>
+
+<h2 id="stability">Stability</h2>
+<p>An API should be relatively stable and slow-changing. An API represents a service contract definition between a Consumer and a Provider, and in order to minimise the dependency of a Provider on a Consumer (managing change communications during change), and minimise the overhead on the Consumer of modifying their own application to track the changing service, the API should be relatively stable. Of course, this does not mean that the internals of the Provider’s application cannot be changed continuously, or that the Consumer cannot be agile in how they consume the service - just that the linkage between them changes slower than both.</p>
+
+<h2 id="evolution">Evolution</h2>
+<p>An API should be evolved to meet changing business needs. But the nature of the evolution is important - as far as possible, evolution should be non-breaking on the consumer, additive in nature, and the core concepts and interaction patterns maintained. Identifiers of data records and entities should be chosen carefully, as changing these causes particularly bad disruption. Additionally, the Provider should ensure that current and current-1 versions of the API are supported, so that Consumers are free to choose when they migrate within a supported time window.</p>
+
+<h2 id="control">Control</h2>
+<p>An API should be managed in a controlled way, ideally with a sense of direction and a product backlog or roadmap.</p>
+
+<h2 id="anti-fragility">Anti-fragility</h2>
+<p>An API should use a semantically-rich serialisation format, where the model structure of data exchanged across the API is self-describing. Examples include the tree-structure and element names of XML and property names of JSON. Crucially, this allows Consumers to pick the data elements that they need, and allows Providers to evolve the API and include additional data elements that do not break the Consumer. By contrast, flat data files with data elements defined by column position are very brittle, since the addition of data elements in the middle of the record alter the column position of all subsequent elements.</p>
+
+<h2 id="operational-support">Operational support</h2>
+<p>An API should be managed, with efficient and communications from the Provider to the Consumer in the event of service degradation, unavailability or evolutionary change.</p>
+
+<h2 id="self-servicability">Self-servicability</h2>
+<p>A Consumer should be able to discover an API, register through a series of automated processes to complete any steps necessary to authenticate themselves and be authorised to access resources, without “engaging” the Provider. This is critical, since too often the Provider becomes a bottleneck, and individual service to the Consumer breaks the Direction of Dependency trait, and makes the service much more expensive.</p>
+
+<h2 id="no-further-dependencies">No further dependencies</h2>
+<p>Preferably, the infrastructure should be in place such that it is not necessary to engage a separate infrastructure team before the Consumer can use the service. A generic MQ routing service, or generic HTTP infrastructure (TCP, IP, DNS, proxy servers etc.) fulfil this trait.</p>
+
+<p>I’m not prescribing an individual technology approach or stack for APIs - for example, I’m not saying that APIs should use JSON over HTTP in a RESTful style, although often these technologies are chosen since they make fulfilling the traits easier. There are definitely times when file or message-queue-based solutions are more appropriate - ultimately I want to encourage these traits regardless of the solution.</p>
+
+<p>James</p>
+
+    </div>
+    <div class="feat share">
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+    </div>
+    
+    
+  </article>
+</section>
+
+      </main>
+
+      <footer>
+        <small>Powered by Jekyll - Theme: <a href="https://github.com/m3xm/hikari-for-Jekyll">hikari</a> - &copy; James Carlyle</small>
+      </footer>
+
+    </div>
+    
+
+    <script src="/js/main.js"></script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-62919534-1', 'james.carlyle.space');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>
