@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Solidity stack too deep"
+date:   2015-07-22 17:57:51
+---
+
 I've been busy over the last few months, compiling Solidity [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on the [Ethereum](https://www.ethereum.org/) platform.
 
 Solidity itself is a really comfortable language for me to work with - it is conceptually a small language, with a manageable learning curve.
@@ -6,7 +12,7 @@ However, I was having many problems with "Stack too deep, try removing local var
 
 My contract had one function in that caused this:
 
-````
+{% highlight js %}
 function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominatedAmount, bytes32 nominationReason) public returns (bool) {
   // lookup users involved
   User nominator = usersByAddress[msg.sender];
@@ -45,7 +51,7 @@ function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominatedAmoun
   c.nominationTotal =+ nominatedAmount;
   return true;
 }
-````
+{% endhighlight %}
 
 The function is part of a reward-scheme contract, where nominators within organisations could nominate others, and  the organisation itself would commit to funding a rewards pool that could be distributed later in the ratio of nominations to nominees. I was trying to allow quite a complex state to be maintained, so that even with multiple nominations to a recipient, they would receive a single Ether payment.
 
