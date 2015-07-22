@@ -18,10 +18,14 @@ Contracts are executable business logic and data, written in a computer language
 --------------------------------------------------------------------------------
 1. they are not ambiguous
    * they do not need a judicial system or lawyers to interpret them
+
 2. they can be unit-tested
+
 3. they execute quickly in seconds, automating back-office operations that are often manual today
+
 4. they are binding
    * participants send irrevocable transactions and value into them
+   
 5. BUT the State may still consider them to be illegal, or at least entered into illegally
    * will we need a State-sponsored block-chain that allows the State to retain control?
    * or will a legal precedent be set that if the contract is executed and participated in an environment where the state has no control, that the State cannot intervene?
