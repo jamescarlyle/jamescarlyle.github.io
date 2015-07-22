@@ -13,7 +13,6 @@ Features
  
 Taking each of these in turn:
 
-
 Contracts are executable business logic and data, written in a computer language
 --------------------------------------------------------------------------------
 1. they are not ambiguous
@@ -29,19 +28,17 @@ Contracts are executable business logic and data, written in a computer language
 5. BUT the State may still consider them to be illegal, or at least entered into illegally
    * will we need a State-sponsored block-chain that allows the State to retain control?
    * or will a legal precedent be set that if the contract is executed and participated in an environment where the state has no control, that the State cannot intervene?
-
 
 Contracts can run on a public block-chain / distributed ledger that is decentralised
 --------------------------------------------------------------------------------
 1. Contracts running on it are beyond the reach of manipulation
-   * they are executed on thousands of computers, beyond the control of a single powerful entity
+   * they are executed on thousands of computers, beyond the control of a single powerful entity
 2. Contracts on a public block-chain are permanent
-   * they cannot be re-written (they can be cancelled or reconfigured, but only through functions that are permanent and visible from the point of creation and before any participation)
-   * they can be very long-lived, and retain history and data state
+   * they cannot be re-written (they can be cancelled or reconfigured, but only through functions that are permanent and visible from the point of creation and before any participation)
+   * they can be very long-lived, and retain history and data state
 3. Contracts do not rely on trust between parties
-   * they can disintermediate “middle-men” such as escrow agents and banks
-   * but where there is an interface with the real-world (e.g. exchange of goods), creative thinking is needed to prove real-world events
-
+   * they can disintermediate “middle-men” such as escrow agents and banks
+   * but where there is an interface with the real-world (e.g. exchange of goods), creative thinking is needed to prove real-world events
 
 The block chain is secure
 --------------------------------------------------------------------------------
