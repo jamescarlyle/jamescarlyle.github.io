@@ -104,6 +104,6 @@ and
 
 Note that this has nothing to do with [Packed Storage](https://github.com/ethereum/wiki/wiki/Solidity-Features#tightly-packed-storage) - each variable takes one slot, even a bool.
 
-Finally, the issue of storage references taking two stack slots is now being fixed - see [here](https://github.com/ethereum/cpp-ethereum/pull/2460)
+Finally, the issue of storage references taking two stack slots is now being fixed - see [here](https://github.com/ethereum/cpp-ethereum/pull/2460).
 
 James
