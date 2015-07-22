@@ -63,7 +63,7 @@ So every input parameter to the function takes one variable, and each return val
 
 So the way I solved this was to simplify separate parts of the function.
 
-````
+{% highlight js %}
 function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominationAmount, bytes32 nominationReason) public returns (bool) {
   // lookup nominator and recipient involved
   User nominator = usersByAddress[msg.sender];
@@ -96,7 +96,7 @@ function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominationAmou
   c.numNominations++;
   return true;
 }
-````
+{% endhighlight %}
 
 So for example, the mapping of nominees within a category was changed to be by userID rather than sequence number. This removed the immediate ability to iterate over this mapping during the reward distribution, and so I replaced this by a single linked-list arrangement, allowing a later function to traverse the nominees. Also, a variable declaration was avoided by the setting of an array element by using the Struct({propertyName1: propertyValue1}) construction.
 
