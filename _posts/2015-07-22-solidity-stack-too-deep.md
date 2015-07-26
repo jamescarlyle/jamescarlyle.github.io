@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Solidity stack too deep"
+date:   2015-07-22 17:57:51
+---
+
 I've been busy over the last few months, compiling Solidity [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on the [Ethereum](https://www.ethereum.org/) platform.
 
 Solidity itself is a really comfortable language for me to work with - it is conceptually a small language, with a manageable learning curve.
@@ -6,7 +12,7 @@ However, I was having many problems with "Stack too deep, try removing local var
 
 My contract had one function in that caused this:
 
-````
+{% highlight js %}
 function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominatedAmount, bytes32 nominationReason) public returns (bool) {
   // lookup users involved
   User nominator = usersByAddress[msg.sender];
@@ -45,7 +51,7 @@ function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominatedAmoun
   c.nominationTotal =+ nominatedAmount;
   return true;
 }
-````
+{% endhighlight %}
 
 The function is part of a reward-scheme contract, where nominators within organisations could nominate others, and  the organisation itself would commit to funding a rewards pool that could be distributed later in the ratio of nominations to nominees. I was trying to allow quite a complex state to be maintained, so that even with multiple nominations to a recipient, they would receive a single Ether payment.
 
@@ -57,7 +63,7 @@ So every input parameter to the function takes one variable, and each return val
 
 So the way I solved this was to simplify separate parts of the function.
 
-````
+{% highlight js %}
 function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominationAmount, bytes32 nominationReason) public returns (bool) {
   // lookup nominator and recipient involved
   User nominator = usersByAddress[msg.sender];
@@ -90,7 +96,7 @@ function nominate(bytes16 categoryID, bytes16 nomineeUserID, uint nominationAmou
   c.numNominations++;
   return true;
 }
-````
+{% endhighlight %}
 
 So for example, the mapping of nominees within a category was changed to be by userID rather than sequence number. This removed the immediate ability to iterate over this mapping during the reward distribution, and so I replaced this by a single linked-list arrangement, allowing a later function to traverse the nominees. Also, a variable declaration was avoided by the setting of an array element by using the Struct({propertyName1: propertyValue1}) construction.
 
