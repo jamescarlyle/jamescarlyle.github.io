@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Winning the BlockCo.in London hackathon"
+title:  "Winning the HackCo.in London hackathon"
 ---
 
 I had a fantastic day yesterday in the company of some very smart people, looking at how the blockchain could be used to solve identity problems. Many thanks to [HackC0in](http://www.hackcoin.io/) for organising the [event](http://www.hackcoin.io/hackcoin-london/), and to [Eris](https://erisindustries.com/) and [Diacle](http://diacle.com/) for sponsoring it. Also to [Barclays Accelerator](http://www.barclaysaccelerator.com/#/home/) for providing the space for the event. Suitably grungy, noisy, no aircon - just what every start-up expects!
