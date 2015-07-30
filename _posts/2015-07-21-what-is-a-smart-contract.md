@@ -26,7 +26,7 @@ Contracts are executable business logic and data, written in a computer language
 
 *	They can be unit-tested
 
-	This is true in theory, and a tremendous potential benefit, since all parties to a contract would be able to test inputs and outputs, and verify the correct operation of a contract against a set of business rules. But this is still hard in practice, partly because writing effective tests is difficult anyway, and partly because the platforms (e.g. Ethereum) are still very immature in this area. The Mix IDE is buggy and undocumented, and the Alethzero GUI offers a contract transaction debug but only against the EVM bytecode, not the human-readable Solidity code. The nature of committing to the blockchain doesn't help: transactions change state in the Ethereum contract, but the effects of the transaction are not felt until the transaction is mined in a block. So any test harness that is checking the actual outputs match the expected ones needs to wait until that mining is complete.
+	This is true in theory, and a tremendous potential benefit, since all parties to a contract would be able to test inputs and outputs, and verify the correct operation of a contract against a set of business rules. But this is still hard in practice, partly because writing effective tests is difficult anyway, and partly because the platforms (e.g. Ethereum) are still very immature in this area. For Ethereum, the Mix IDE is buggy and undocumented, and the Alethzero GUI offers a contract transaction debug but only against the EVM bytecode, not the human-readable Solidity code. The nature of committing to the blockchain doesn't help: transactions change state in the Ethereum contract, but the effects of the transaction are not felt until the transaction is mined in a block. So any test harness that is checking the actual outputs match the expected ones needs to wait until that mining is complete.
 
 *	They execute quickly in seconds, automating back-office operations that are often manual today
 
@@ -49,7 +49,7 @@ Contracts can run on a public block-chain / distributed ledger that is decentral
 
 *	Contracts running on it are beyond the reach of manipulation
 
-	They are executed on thousands of computers, beyond the control of a single powerful entity. It will become important to ensure that the network itself is sufficiently "diverse", i.e. that the mining is happening across nodes that are sufficiently separated from each other, both geographically and geopolitically.
+	They are executed on thousands of computers, beyond the control of a single powerful entity. It will become important to ensure that the network itself is sufficiently "diverse", i.e. that the mining is happening across nodes that are sufficiently separated from each other, both geographically and geopolitically. Of course, it also matters who those miners are - the predominance of a small number of Bitcoin miners in China is definitely an impediment for the adoption of Bitcoin by western financial service companies, for example.
 
 *	Contracts on a public block-chain are permanent
 
