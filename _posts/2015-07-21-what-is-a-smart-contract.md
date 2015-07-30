@@ -21,9 +21,11 @@ Contracts are executable business logic and data, written in a computer language
 --------------------------------------------------------------------------------
 
 1. They are not ambiguous - because code inputs result in consistent outputs
+
 	* They do not need a judicial system or lawyers to interpret them. But the lawyers will need to learn how to code! Consensus amongst techies and lawyers seems to be that law firms that have tech skills will do well in this space.
 
 2. They can be unit-tested
+
 	* This is true in theory, and a tremendous potential benefit, since all parties to a contract would be able to test inputs and outputs, and verify the correct operation of a contract against a set of business rules. But this is still hard in practice, partly because writing effective tests is difficult anyway, and partly because the platforms (e.g. Ethereum) are still very immature in this area. The Mix IDE is buggy and undocumented, and the Alethzero GUI offers a contract transaction debug but only against the EVM bytecode, not the human-readable Solidity code. The nature of committing to the blockchain doesn't help: transactions change state in the Ethereum contract, but the effects of the transaction are not felt until the transaction is mined in a block. So any test harness that is checking the actual outputs match the expected ones needs to wait until that mining is complete.
 
 3. They execute quickly in seconds, automating back-office operations that are often manual today
