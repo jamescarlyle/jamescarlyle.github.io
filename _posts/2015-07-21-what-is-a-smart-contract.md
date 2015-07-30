@@ -19,6 +19,7 @@ Taking each of these in turn:
 
 Contracts are executable business logic and data, written in a computer language
 --------------------------------------------------------------------------------
+
 1. They are not ambiguous - because code inputs result in consistent outputs
 	* They do not need a judicial system or lawyers to interpret them. But the lawyers will need to learn how to code! Consensus amongst techies and lawyers seems to be that law firms that have tech skills will do well in this space.
 
@@ -31,12 +32,14 @@ Contracts are executable business logic and data, written in a computer language
 4. They are binding
 	* Participants send irrevocable transactions and value into them. This means that participants need to be completely aware of what the contract means, and the implications of entering into it. A related issue is the representation of the contract - it could take the form of human-readable text, Solidity code, or compiled bytecode - what mechanisms exist to ensure that what is running is what is presented to the parties? I believe a decompiler, able to examine the actual compiled bytecode of a contract that has been launched and turn it into something more readable, will be necessary. Or at least a checking tool that can recompile a publicly stated Solidity contract and compare it against one running on the network.
    
-5. BUT the State may still consider them to be illegal, or at least entered into illegally, or by coercion. But a point that I made at a Law/Contract event hosted at the [Barclays Accelerator](http://www.barclaysaccelerator.com/#/home/) was that once they have been entered into, a censor-resistant public blockchain would prevent a judicial system from directly intervening in the operation of the contract anyway.
-   * Will we need a State-sponsored block-chain that allows the State to retain control?
-   * Or will a legal precedent be set that if the contract is executed and participated in an environment where the state has no control, that the State cannot intervene?
+5. BUT the State may still consider them to be illegal, or at least entered into illegally, or by coercion. 
+	* But a point that I made at a Law/Contract event hosted at the [Barclays Accelerator](http://www.barclaysaccelerator.com/#/home/) was that once they have been entered into, a censor-resistant public blockchain would prevent a judicial system from directly intervening in the operation of the contract anyway.
+	* Will we need a State-sponsored block-chain that allows the State to retain control?
+	* Or will a legal precedent be set that if the contract is executed and participated in an environment where the state has no control, that the State cannot intervene?
 
 Contracts can run on a public block-chain / distributed ledger that is decentralised
 --------------------------------------------------------------------------------
+
 1. Contracts running on it are beyond the reach of manipulation
 	* They are executed on thousands of computers, beyond the control of a single powerful entity. It will become important to ensure that the network itself is sufficiently "diverse", i.e. that the mining is happening across nodes that are sufficiently separated from each other, both geographically and geopolitically.
 
@@ -50,6 +53,7 @@ Contracts can run on a public block-chain / distributed ledger that is decentral
 
 The block chain is secure
 --------------------------------------------------------------------------------
+
 1. All transactions are controlled by public/private keys and open hash cryptography algorithms – at least as secure as BitCoin. 
 	* This is key  - the larger the transaction, the more important this becomes. Ethereum itself has been subject to 2 external security audits, but the more compelling proof will be correct operation with a range of contracts and parties, over an extended period of time.
 
