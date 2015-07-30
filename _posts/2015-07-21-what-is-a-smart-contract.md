@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is a Smart Contract"
+title:  "What is a Smart Contract?"
 ---
 
 I'm spending quite a lot of time experimenting with [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on the [Ethereum](https://www.ethereum.org/) platform. There are many definitions for smart contracts: my favorite recollection (from [Richard Brown](http://gendal.me)) is 
