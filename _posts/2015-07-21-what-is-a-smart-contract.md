@@ -3,11 +3,11 @@ layout: post
 title:  "What is a Smart Contract?"
 ---
 
-I'm spending quite a lot of time experimenting with [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on the [Ethereum](https://www.ethereum.org/) platform. There are many definitions for smart contracts: my favorite recollection (from [Richard Brown](http://gendal.me)) is 
+I'm spending quite a lot of time experimenting with [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on the [Ethereum](https://www.ethereum.org/) platform. There are many definitions for smart contracts: my favorite (from recollection, [Richard Brown](http://gendal.me)) is 
 
 > A smart contract is one where the control of assets is managed by a computer
 
-Upon reflection, I think this would include all ***Coin protocols. Below, I am using the term "Smart Contracts" below in the sense that they exist on Ethereum, and have tried to capture what makes them special for me:
+Upon reflection, I think this would include all ***Coin protocols. I am using the term "Smart Contracts" below in the sense that they exist on Ethereum, and have tried to capture what makes them special for me:
 
 Features
 ========
